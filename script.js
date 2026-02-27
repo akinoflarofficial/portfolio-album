@@ -1,8 +1,8 @@
 // Buraya istediğin kadar resim ekleyebilirsin, sayfa otomatik oluşur.
 const cizimlerim = [
     { dosya: 'resim1.jpg', baslik: 'Anneanne', teknik: 'Kurşun Kalem' },
-    { dosya: 'resim2.jpg', baslik: 'Eski Sokak', teknik: 'Kömür' },
-    { dosya: 'resim3.jpg', baslik: 'Portre Çalışması', teknik: 'Grafit' },
+    { dosya: 'resim2.jpg', baslik: 'Eski Sokak', teknik: 'Kurşun Kalem' },
+    { dosya: 'resim3.jpg', baslik: 'Portre Çalışması', teknik: 'Kurşun Kalem' },
     // Yeni resim ekledikçe altına ekle...
 ];
 
@@ -44,3 +44,4 @@ function movePage(page, pageNum) {
 document.querySelectorAll('.page').forEach((page, index) => {
     page.style.zIndex = 100 - index;
 });
+
