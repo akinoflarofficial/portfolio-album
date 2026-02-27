@@ -1,0 +1,103 @@
+:root {
+    --paper-color: #f4f1ea; /* Eskitilmiş kağıt rengi */
+    --cover-color: #3d2b1f; /* Deri kapak rengi */
+    --text-primary: #2c2c2c;
+    --accent: #8b7d6b;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1a1a1a; /* Koyu arka plan masayı temsil eder */
+    font-family: 'Playfair Display', serif;
+}
+
+.table-surface {
+    perspective: 2000px; /* 3D derinlik */
+}
+
+.book {
+    position: relative;
+    width: 450px;
+    height: 600px;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--paper-color);
+    box-shadow: inset 3px 0px 20px rgba(0,0,0,0.1), 5px 5px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transform-origin: left;
+    transition: transform 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+/* Sayfa Çevrilme Hareketi */
+.page.flipped {
+    transform: rotateY(-180deg);
+}
+
+.page-content {
+    width: 100%;
+    text-align: center;
+    backface-visibility: hidden; /* Sayfanın arkasının görünmemesi için */
+}
+
+/* Kapak Tasarımı */
+.cover-front {
+    background: var(--cover-color);
+    color: var(--paper-color);
+    border-radius: 0 5px 5px 0;
+}
+
+.cover-front .ornament {
+    height: 2px;
+    width: 60%;
+    background: var(--paper-color);
+    margin: 20px auto;
+}
+
+/* El yazısı stili */
+.handwriting {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+/* Fotoğraf Çerçevesi */
+.photo-frame {
+    background: white;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.photo-frame img {
+    max-width: 100%;
+    height: auto;
+    filter: sepia(0.2) contrast(1.1); /* Hafif nostaljik filtre */
+}
+
+.instruction {
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 30px;
+    opacity: 0.6;
+}
