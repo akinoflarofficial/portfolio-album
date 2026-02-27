@@ -3,53 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kara Kalem Sanatçısı | Nostaljik Portfolyo</title>
+    <title>Kara Kalem Portfolyo</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <header class="navbar">
+        <div class="logo">Portfolio Album</div>
+        <nav>
+            <ul>
+                <li><a href="#hakkimda">Hakkımda</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+                <li><a href="#sergiler">Sergiler</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="table-surface">
         <div class="book" id="book">
             <div class="page cover-front" onclick="movePage(this, 1)">
                 <div class="page-content">
-                    <h1>KARA KALEM</h1>
+                    <h1 id="galeri">KARA KALEM</h1>
                     <div class="ornament"></div>
-                    <p>Aile Albümü Tadında Eskizler</p>
-                    <span class="instruction">Açmak için tıklayın</span>
+                    <p>Sanat Portfolyosu</p>
                 </div>
             </div>
 
-            <div class="page" onclick="movePage(this, 2)">
+            <div class="page" id="hakkimda" onclick="movePage(this, 2)">
                 <div class="page-content">
-                    <h2 class="handwriting">Anılar ve Çizgiler</h2>
-                    <p>Zamanın tozlu raflarından çıkan kareleri, kurşun kalemle yeniden hayata döndürüyoruz.</p>
+                    <h2 class="handwriting">Hakkımda</h2>
+                    <p>Çizgilerin dünyasında geçen 20 yıl... Her portre bir hikaye, her gölge bir anı taşır.</p>
                 </div>
             </div>
 
-            <div class="page" onclick="movePage(this, 3)">
+            <div class="page cover-back" id="iletisim">
                 <div class="page-content">
-                    <div class="photo-frame">
-                        <img src="resim1.jpg" alt="Portre 1">
-                    </div>
-                    <p class="caption">Çalışma 1  <br><small>Kurşun Kalem ve Kömür</small></p>
-                </div>
-            </div>
-
-            <div class="page" onclick="movePage(this, 4)">
-                <div class="page-content">
-                    <div class="photo-frame">
-                        <img src="resim2.jpg" alt="Portre 2">
-                    </div>
-                    <p class="caption">Çalışma 2 <br><small>2B - 4B Grafit</small></p>
-                </div>
-            </div>
-
-            <div class="page cover-back">
-                <div class="page-content">
-                    <h2 class="handwriting">İletişim</h2>
-                    <p>akinoflarofficial@gmail.com</p>
-                    <div class="ornament"></div>
+                    <h2 class="handwriting">Sergiler & İletişim</h2>
+                    <p>2023 - Galeri Sanat <br> 2024 - Karma Sergi</p>
+                    <div class="divider"></div>
+                    <p>iletisim@sanat.com</p>
                 </div>
             </div>
         </div>
@@ -58,4 +52,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
